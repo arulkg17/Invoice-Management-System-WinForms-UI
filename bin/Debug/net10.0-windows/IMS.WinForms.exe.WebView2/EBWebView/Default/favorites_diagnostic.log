@@ -1,0 +1,19 @@
+2026-11-01 20:53:10.346: [INFO] CurrentProfilePath: D:\Projects\NetCore\IMS.WinForms\IMS.WinForms\bin\Debug\net10.0-windows\IMS.WinForms.exe.WebView2\EBWebView\Default
+2026-11-01 20:53:10.346: [INFO] Profiles total count: 1
+2026-11-01 20:53:10.346: [INFO] Profile: name=Profile 1 path=D:\Projects\NetCore\IMS.WinForms\IMS.WinForms\bin\Debug\net10.0-windows\IMS.WinForms.exe.WebView2\EBWebView\Default lastActive=null
+2026-11-01 20:53:10.346: [INFO] LastUsedProfileDir: D:\Projects\NetCore\IMS.WinForms\IMS.WinForms\bin\Debug\net10.0-windows\IMS.WinForms.exe.WebView2\EBWebView\Default
+2026-11-01 20:53:10.346: [INFO] OnDoneLoading sync enabled: 0
+2026-11-01 20:53:10.346: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-01 20:53:10.346: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-01 20:53:10.346: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-01 20:53:14.473: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-01 20:54:35.049: [INFO] CurrentProfilePath: D:\Projects\NetCore\IMS.WinForms\IMS.WinForms\bin\Debug\net10.0-windows\IMS.WinForms.exe.WebView2\EBWebView\Default
+2026-11-01 20:54:35.049: [INFO] Profiles total count: 1
+2026-11-01 20:54:35.049: [INFO] Profile: name=Profile 1 path=D:\Projects\NetCore\IMS.WinForms\IMS.WinForms\bin\Debug\net10.0-windows\IMS.WinForms.exe.WebView2\EBWebView\Default lastActive=2026-11-01T20:53:10.591Z
+2026-11-01 20:54:35.049: [INFO] LastUsedProfileDir: D:\Projects\NetCore\IMS.WinForms\IMS.WinForms\bin\Debug\net10.0-windows\IMS.WinForms.exe.WebView2\EBWebView\Default
+2026-11-01 20:54:35.049: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=D:\Projects\NetCore\IMS.WinForms\IMS.WinForms\bin\Debug\net10.0-windows\IMS.WinForms.exe.WebView2\EBWebView\Default lastActive=2026-11-01T20:53:10.591Z
+2026-11-01 20:54:35.049: [INFO] OnDoneLoading sync enabled: 0
+2026-11-01 20:54:35.049: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-01 20:54:35.049: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-01 20:54:35.049: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-01 20:54:38.411: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
