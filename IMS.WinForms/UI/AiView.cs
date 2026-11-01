@@ -4,34 +4,42 @@ using Ims.WinForms.Services;
 namespace Ims.WinForms.UI;
 
 /// Invoice.AI assistant: single-intent and multi-intent questions.
+[System.ComponentModel.DesignerCategory("Code")]
 public sealed class AiView : UserControl
 {
     private readonly ApiClient _api;
-    private readonly TextBox _question = new() { Multiline = true, Dock = DockStyle.Top, Height = 90, ScrollBars = ScrollBars.Vertical };
-    private readonly RadioButton _single = new() { Text = "Single intent", Checked = true, AutoSize = true, Margin = new Padding(0, 8, 12, 0) };
-    private readonly RadioButton _multi = new() { Text = "Multiple intent", AutoSize = true, Margin = new Padding(0, 8, 12, 0) };
-    private readonly Button _ask;
-    private readonly TextBox _output = new() { Multiline = true, ReadOnly = true, Dock = DockStyle.Fill, ScrollBars = ScrollBars.Both, Font = new Font("Consolas", 10), WordWrap = false };
+    private readonly TextBox _question = new() { Multiline = true, BorderStyle = BorderStyle.None, Dock = DockStyle.Fill, Font = Theme.Body, ScrollBars = ScrollBars.Vertical };
+    private readonly CheckBox _multi = new() { Text = "Multiple intent", AutoSize = true, Margin = new Padding(8, 9, 0, 0), ForeColor = Theme.TextPrimary, BackColor = Color.Transparent };
+    private readonly ModernButton _ask;
+    private readonly TextBox _output = new() { Multiline = true, ReadOnly = true, BorderStyle = BorderStyle.None, BackColor = Color.White, Dock = DockStyle.Fill, ScrollBars = ScrollBars.Both, Font = new Font("Consolas", 10), WordWrap = false };
 
     public AiView(ApiClient api)
     {
         _api = api;
+        DoubleBuffered = true;
+        BackColor = Theme.AppBg;
+        Padding = new Padding(24);
         _ask = Ui.Button("Ask", async (_, _) => await AskAsync());
 
-        var bar = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 44, Padding = new Padding(0, 6, 0, 0) };
+        // answer card (fills the rest)
+        var answerCard = new CardPanel { Dock = DockStyle.Fill, Padding = new Padding(14, 14, 14, 20) };
+        answerCard.Controls.Add(_output);
+
+        // question card
+        var bar = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 52, Padding = new Padding(0, 6, 0, 0), BackColor = Color.Transparent };
         bar.Controls.Add(_ask);
-        bar.Controls.Add(_single);
         bar.Controls.Add(_multi);
+        var questionCard = new CardPanel { Dock = DockStyle.Top, Height = 190, Padding = new Padding(14, 14, 14, 18) };
+        questionCard.Controls.Add(_question);
+        questionCard.Controls.Add(bar);
 
-        var top = new Panel { Dock = DockStyle.Top, Height = 190, Padding = new Padding(12) };
-        top.Controls.Add(bar);
-        top.Controls.Add(_question);
-        top.Controls.Add(new Label { Text = "AI Assistant", Font = new Font("Segoe UI", 14, FontStyle.Bold), Dock = DockStyle.Top, Height = 34 });
+        var spacer = new Panel { Dock = DockStyle.Top, Height = 16, BackColor = Color.Transparent };
+        var title = new Label { Text = "AI Assistant", Font = Theme.Heading, Dock = DockStyle.Top, Height = 50, ForeColor = Theme.TextPrimary };
 
-        var body = new Panel { Dock = DockStyle.Fill, Padding = new Padding(12, 0, 12, 12) };
-        body.Controls.Add(_output);
-        Controls.Add(body);
-        Controls.Add(top);
+        Controls.Add(answerCard);
+        Controls.Add(spacer);
+        Controls.Add(questionCard);
+        Controls.Add(title);
     }
 
     async Task AskAsync()

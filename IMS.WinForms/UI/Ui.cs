@@ -20,23 +20,38 @@ public static class Ui
     public static bool Confirm(string text) =>
         MessageBox.Show(text, "IMS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
 
-    public static Button Button(string text, EventHandler onClick)
+    public static ModernButton Button(string text, EventHandler onClick, ButtonKind kind = ButtonKind.Primary)
     {
-        var b = new Button { Text = text, AutoSize = true, Padding = new Padding(8, 2, 8, 2), Margin = new Padding(0, 0, 8, 0) };
+        var b = new ModernButton { Text = text, Kind = kind };
         b.Click += onClick;
         return b;
     }
 
-    public static DataGridView Grid() => new()
+    /// Read-only styled list grid.
+    public static DataGridView Grid()
     {
-        Dock = DockStyle.Fill,
-        ReadOnly = true,
-        AllowUserToAddRows = false,
-        AllowUserToDeleteRows = false,
-        MultiSelect = false,
-        SelectionMode = DataGridViewSelectionMode.FullRowSelect,
-        RowHeadersVisible = false,
-        BackgroundColor = Color.White,
-        AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+        var g = new DataGridView
+        {
+            Dock = DockStyle.Fill,
+            ReadOnly = true,
+            AllowUserToAddRows = false,
+            AllowUserToDeleteRows = false,
+            MultiSelect = false,
+            SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+        };
+        Theme.StyleGrid(g);
+        return g;
+    }
+
+    public static Label Heading(string text) => new()
+    {
+        Text = text, Font = Theme.Heading, ForeColor = Theme.TextPrimary, AutoSize = true, BackColor = Color.Transparent,
+        Margin = new Padding(0, 4, 24, 0),
+    };
+
+    public static Label Caption(string text) => new()
+    {
+        Text = text, Font = Theme.Body, ForeColor = Theme.Muted, AutoSize = true, BackColor = Color.Transparent,
     };
 }

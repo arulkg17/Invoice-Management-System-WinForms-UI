@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\NetCore\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms.csproj": {}
+    "D:\\Projects\\NetCore\\IMS.WinForms-Git1\\IMS.WinForms\\IMS.WinForms.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\NetCore\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms.csproj": {
+    "D:\\Projects\\NetCore\\IMS.WinForms-Git1\\IMS.WinForms\\IMS.WinForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\NetCore\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms.csproj",
+        "projectUniqueName": "D:\\Projects\\NetCore\\IMS.WinForms-Git1\\IMS.WinForms\\IMS.WinForms.csproj",
         "projectName": "IMS.WinForms",
-        "projectPath": "D:\\Projects\\NetCore\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms.csproj",
+        "projectPath": "D:\\Projects\\NetCore\\IMS.WinForms-Git1\\IMS.WinForms\\IMS.WinForms.csproj",
         "packagesPath": "C:\\Users\\arulg\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\NetCore\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms\\obj\\",
+        "outputPath": "D:\\Projects\\NetCore\\IMS.WinForms-Git1\\IMS.WinForms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

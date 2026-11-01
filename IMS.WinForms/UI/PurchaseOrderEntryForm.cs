@@ -83,7 +83,7 @@ public sealed class PurchaseOrderEntryForm : Form
         if (e.RowIndex >= 0 && e.ColumnIndex == 0 && _grid.Rows[e.RowIndex].DataBoundItem is Line l && l.Rate == 0)
         {
             var item = _items.FirstOrDefault(i => i.Id == l.ItemId);
-            if (item is not null) l.Rate = item.SalePrice;      // default the rate from the item master
+            if (item is not null) l.Rate = (decimal)item.Rate;      // default the rate from the item master
         }
         Recalc();
         if (e.RowIndex >= 0) _grid.InvalidateRow(e.RowIndex);
