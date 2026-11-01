@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hqX2LSWZM/8=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\NetCore\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms\\IMS.WinForms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arulg\\.nuget\\packages\\microsoft.web.webview2\\1.0.2792.45\\microsoft.web.webview2.1.0.2792.45.nupkg.sha512"
+  ],
+  "logs": []
+}
